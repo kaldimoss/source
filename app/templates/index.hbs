@@ -1,0 +1,88 @@
+{{!-- Remove the WelcomeFlame component and write your HTML code here --}}
+
+<div>
+
+<div class="line2">
+      
+        <div> <LinkTo @route="reviews"> REVIEWS </LinkTo> </div>
+        <div> <LinkTo @route="contact"> CONTACT </LinkTo> </div>
+        <div> <a href="https://kaldimoss.github.io/home.io/Moss_cv2024.html"> CV </a> </div>
+    </div>
+
+ 
+    <div class="line3">
+            
+        {{#each @model.categories as |category|}}
+            <div class="{{category.modules.classes}} p-1">
+                <LinkTo @route="category-page" @model="{{category.slug}}">
+                    {{category.modules.title}}
+                </LinkTo>
+            </div>
+        {{/each}}
+                    {{!-- {{get (get this.model.categories 1) 'modules.title'}}     --}}
+
+        
+
+    {{!--
+        <div class="{{get (get this.model.categories 0) 'modules.classes'}} p-1">
+            <LinkTo @route="/:slug"> 
+                {{get (get this.model.categories 0) 'modules.title'}}
+            </LinkTo>
+        </div>
+        
+        <div class="tx p-1"><LinkTo @route="texts">{{get (get this.model.categories 1) 'modules.title'}}</LinkTo>  </div>
+        <div class="sk p-1"><LinkTo @route="sketches">{{get (get this.model.categories 2) 'modules.title'}}</LinkTo> </div>
+        <div class="pr p-1"><LinkTo @route="proposals">{{get (get this.model.categories 3) 'modules.title'}}</LinkTo> </div>
+    
+    --}}
+
+
+    </div>
+
+    <div class="title">
+        <br>
+        Moss Homepage
+    </div>
+
+    
+    <div class="content px-5 mx-2">
+        <div>
+            I AM INTERESTED IN MEASUREMENT, TOOLS, NETWORKS, LANGUAGE, AND THE NATURAL WORLD. I WORK WITH PEOPLE, CODE, ELECTRONICS, SCULPTURE, SOUND, AND PERFORMANCE. 
+            THIS IS A WEBSITE FOR ONGOING INVESTIGATIONS, AN ARCHIVE OF TESTS, IDEAS AND, DEAD ENDS. BELOW ARE THE COLLECTIVES I AM PART OF, OLDER WEBSITES AS WELL AS LIVE PROJETS. <br><br>
+            
+        </div>
+     </div>
+     <div class="line4">
+       <a href="https://whattt.cargo.site/"> Portfolio website </a>
+    </div>
+
+    <div class="line5">
+        <LinkTo @route="studio">
+            Studio 
+        </LinkTo> 
+     </div>
+
+     <div class="line6">
+        <div><a href="https://cynkcollective.github.io/home.io"> CYNK </a></div>
+        <div><a href="https://notaat-notaat.github.io/About/"> NOTAAT</a> </div>
+    </div>
+   
+
+    <div class="line8">
+        <div> <a href="https://kaldimoss.github.io/conductors.io/"> Operators and Conductors <br> (2023) </a> </div>
+        <div> <a href="https://sultanazana.github.io/dreams.io/"> Dreams and Experiments <br> (2019) </a> </div>
+        <div><a href="https://sultanazana.github.io/fieldness.io/"> The Fieldness Website <br> (2020) </a> </div>
+        <div><a href="https://thoughtcavesgrowfast.wordpress.com/2018/06/11/the-mycelium-project/"> The Mycellium Project<br> (2017) </a></div>
+    </div>  
+
+
+
+
+
+
+
+
+</div>
+
+
+{{outlet}}

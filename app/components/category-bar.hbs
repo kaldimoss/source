@@ -1,0 +1,21 @@
+{{!-- template-lint-disable no-yield-only --}}
+{{yield}}
+
+<div class="wk d-flex justify-content-around p-2">
+    <div class="d-flex"> 
+        <LinkTo @route="index">⌂</LinkTo>
+    </div>
+
+    <div class="d-flex">      
+        {{@category.modules.title}}   
+        
+    </div>
+
+    <div>
+        <LinkTo @route="category-page" @model="{{this.category.slug}}">>
+                   
+                </LinkTo>
+        
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+{{page-title "Page2"}}
+<CategoryBar />
+
+    <div id="twoscrolll" class="min-vh-100">
+       
+        
+                
+        {{#each this.model.modules.page_content.blocks as |block|}}
+            <div class="mx-2 px-3">
+                
+                <p>{{{block.data.text}}}</p>
+            </div>
+        {{/each}}
+
+
+    </div>
+    
+    <div id="twoscrollr">
+       
+       {{#each this.model.modules.image as |image|}}
+        <div class="mx-2 px-2">
+
+            {{!-- template-lint-disable no-shadowed-elements --}}
+            <img class="img-fluid" src={{image.md.url}} alt="img-not-loaded">
+        </div>
+       {{/each}}
+        this is the right side.
+    </div>
+
+{{outlet}}

@@ -1,0 +1,29 @@
+{{page-title "CategoryPage"}}
+
+<CategoryBar @category={{this.model.category}} />
+
+<div class="{{this.category.modules.classes}} listofcontent p-2 mx-5">
+   
+<p>
+
+  <div class="my-3">
+
+    {{#each this.model.stories as |story|}}
+
+    <LinkTo @route="page2" @model={{story.slug}}>
+    <div class="d-flex">
+      {{story.modules.title}} <br>
+      {{story.modules.date}} <br><br>
+    </div>
+
+    </LinkTo>
+    {{/each}}
+  </div>
+
+
+
+</p>
+
+</div>
+
+{{outlet}}
