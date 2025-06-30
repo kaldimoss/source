@@ -1,0 +1,18 @@
+{{page-title "GeneralAtm"}}
+
+<div class="p-3">
+    
+    {{{get (get this.model.block1.modules.page_content.blocks '0') 'data.text'}}}
+    </div>
+    <div>
+        {{!-- template-lint-disable require-valid-alt-text --}}
+        <img class="img-fluid" src={{get (get this.model.block1.modules.image '0') 'lg.url'}}>
+  
+    </div>
+    
+    <div>
+    {{{get (get this.model.block1.modules.page_content.blocks '1') 'data.text'}}}
+     </div>
+
+
+{{outlet}}
